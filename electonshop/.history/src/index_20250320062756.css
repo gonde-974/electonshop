@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NAVBAR COMPONENT */
+
+@layer components {
+  .nav-container {
+    @apply bg-mainBlue text-whiteTextColor shadow-md;
+  }
+
+  .nav-wrapper {
+    @apply container mx-auto flex items-center justify-between p-4;
+  }
+
+  .nav-logo {
+    @apply flex items-center gap-2 text-xl md:text-2xl font-bold;
+  }
+
+  .logo-icon {
+    @apply text-mainYellow md:text-4xl;
+  }
+
+  .search-bar {
+    @apply hidden md:flex flex-grow mx-4 items-center border border-mainYellow rounded-lg overflow-hidden max-w-lg w-full lg:w-1/3;
+  }
+
+  .search-input {
+    @apply p-2 w-full focus:outline-none text-blackTextColor;
+  }
+
+  .search-button {
+    @apply bg-mainYellow px-4 py-2 text-whiteTextColor;
+  }
+
+  .nav-icons {
+    @apply hidden md:flex gap-6;
+  }
+
+  .nav-link {
+    @apply hover:text-mainYellow flex items-center gap-1;
+  }
+
+  .nav-text {
+    @apply text-sm;
+  }
+
+  .menu-button {
+    @apply md:hidden text-whiteTextColor;
+  }
+
+  .mobile-nav {
+    @apply md:hidden flex flex-col items-center gap-4 py-4 bg-mainBlue text-whiteTextColor;
+  }
+
+  .mobile-search-bar {
+    @apply flex w-[90%] items-center border border-mainYellow rounded-lg overflow-hidden;
+  }
+
+  .mobile-menu {
+    @apply flex flex-col items-center gap-3;
+  }
+
+  .mobile-nav-link {
+    @apply hover:text-mainYellow;
+  }
+
+  .mobile-icons {
+    @apply flex gap-6;
+  }
+
+ 
+}
+
+@layer components {
+  .nav-icons {
+    @apply flex items-center gap-6;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-2;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium transition hover:text-mainYellow;
+  }
+
+  .nav-counter {
+    @apply absolute top-3 right-0 transform translate-x-1/2 -translate-y-1/2 text-xs bg-mainYellow text-white px-1 rounded-full ;
+  }
+}
+
+
+
+/* ERROR PAGE */
+
+@layer components {
+  .error-container {
+    @apply flex flex-col items-center justify-center h-screen bg-gray-100 p-4;
+  }
+
+  .error-icon {
+    @apply text-mainRed mb-4;
+  }
+
+  .error-title {
+    @apply text-3xl font-bold text-blackTextColor mb-2;
+  }
+
+  .error-text {
+    @apply text-lg text-gray-700 mb-6 text-center max-w-md;
+  }
+
+  .error-button {
+    @apply px-6 py-3 bg-mainBlue text-whiteTextColor rounded-full transition-all hover:bg-mainYellow;
+  }
+}
+

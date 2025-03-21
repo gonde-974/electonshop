@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  /* STYLE NAV BAR COMPONENT */
+  .navbar {
+    @apply bg-gray-900 text-white p-4 flex justify-between items-center;
+  }
+
+  .navbar-list {
+    @apply hidden md:flex items-center space-x-6;
+  }
+
+  .navbar-logo {
+    @apply text-2xl font-bold;
+  }
+
+  .nav-link {
+    @apply text-white hover:text-gray-400 transition duration-300;
+  }
+
+  .nav-link-active {
+    @apply text-yellow-400 font-semibold;
+  }
+
+  /* Styles for Mobile Menu */
+  .mobile-menu {
+    @apply absolute top-16 left-0 w-full bg-gray-900 p-4 flex flex-col space-y-4 md:hidden;
+  }
+
+  .hamburger {
+    @apply md:hidden text-white text-2xl cursor-pointer;
+  }
+
+  /* STYLE ERROR PAGE COMPONENT */
+  .error-container {
+    @apply flex flex-col items-center justify-center h-screen text-center bg-gray-900 text-white;
+  }
+  
+  .error-icon {
+    @apply text-yellow-400 mb-4;
+  }
+
+  .error-title {
+    @apply text-4xl font-bold mb-2;
+  }
+
+  .error-text {
+    @apply text-lg text-gray-300 mb-6;
+  }
+
+  .error-button {
+    @apply bg-Yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-lg transition;
+  }
+}

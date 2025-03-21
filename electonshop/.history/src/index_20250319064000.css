@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  /* STYLE NAV BAR COMPONENT */
+  .navbar {
+    @apply bg-mainBlue text-mainBlue p-5 flex justify-between items-center h-24;
+  }
+
+  .navbar-list {
+    @apply hidden md:flex items-center space-x-6;
+  }
+
+  .navbar-logo {
+    @apply text-2xl font-bold;
+  }
+
+  .nav-link {
+    @apply text-white hover:text-gray-400 transition duration-300;
+  }
+
+  .nav-link-active {
+    @apply text-yellow-400 font-semibold;
+  }
+
+  /* LOGO */
+  .logo { 
+    @apply flex items-center gap-[10px] text-mainYellow
+  }
+
+  .logoImage {
+    @apply text-[50px] bg-yellow-100 p-[3px]
+  }
+
+  
+    /* SEARCH CONTAINER */
+    .search-container {
+      @apply flex items-center bg-white border border-gray-300 rounded-full shadow-md p-2 w-full max-w-sm 
+             sm:max-w-md md:max-w-lg lg:max-w-xl;
+    }
+  
+    /* SEARCH INPUT */
+    .search-input {
+      @apply flex-grow px-3 py-1 text-blackTextColor placeholder-gray-500 outline-none bg-transparent 
+             sm:px-3 md:px-4;
+    }
+  
+    /* SEARCH BUTTON */
+    .search-button {
+      @apply bg-mainBlue text-whiteTextColor px-3 py-1 rounded-full hover:bg-mainYellow transition-all 
+             sm:px-4 md:px-5;
+    } 
+
+    @layer components {
+  /* NAVBAR LIST */
+  .navbar-list {
+    @apply flex items-center gap-4 
+           sm:gap-6 md:gap-8 lg:gap-10;
+  }
+
+  /* NAVIGATION LINKS */
+  .nav-link {
+    @apply flex items-center gap-1 text-blackTextColor text-sm font-medium transition-all 
+           hover:text-mainBlue sm:text-base md:text-lg;
+  }
+
+  .nav-link-active {
+    @apply text-mainBlue font-semibold;
+  }
+
+  /* ICON STYLE */
+  .icon {
+    @apply text-black text-[20px] 
+           sm:text-[22px] md:text-[24px];
+  }
+
+  /* COUNTERS */
+  .nav-counter {
+    @apply text-sm bg-mainRed text-white px-1.5 py-0.5 rounded-full ml-1 
+           sm:text-xs sm:px-2 md:text-sm md:px-2.5;
+  }
+}
+
+    
+
+  /* Styles for Mobile Menu */
+  .mobile-menu {
+    @apply absolute top-16 left-0 w-full bg-gray-900 p-4 flex flex-col space-y-4 md:hidden;
+  }
+
+  .hamburger {
+    @apply md:hidden text-white text-2xl cursor-pointer;
+  }
+
+  /* STYLE ERROR PAGE COMPONENT */
+  .error-container {
+    @apply flex flex-col items-center justify-center min-h-screen text-center bg-gray-900 text-white p-6;
+  }
+
+  .error-icon {
+    @apply text-yellow-400 mb-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24;
+  }
+
+  .error-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold mb-2;
+  }
+
+  .error-text {
+    @apply text-base sm:text-lg md:text-xl text-gray-300 mb-6 max-w-lg;
+  }
+
+  .error-button {
+    @apply bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg transition;
+  }
+
+  /* HEADING COMPONENT */
+  .heading-container {
+    @apply w-full max-w-[1200px] mx-auto flex flex-col justify-center items-center h-[70px] gap-[10px];
+  }
+
+  @screen md {
+    .heading-container {
+      @apply flex-row justify-between;
+    }
+  }
+
+  .heading-text {
+    @apply text-black text-[16px];
+  }
+
+  .info-wrapper {
+    @apply flex items-center gap-[16px];
+  }
+
+  .info-block {
+    @apply flex items-center gap-[5px];
+  }
+
+  .icon {
+    @apply text-black text-[25px];
+  }
+}

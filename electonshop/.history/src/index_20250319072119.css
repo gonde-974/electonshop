@@ -1,0 +1,74 @@
+@layer components {
+  /* NAVBAR */
+  .navbar {
+    @apply flex justify-between items-center bg-mainBlue px-4 py-3 rounded-lg shadow-md 
+           w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%];
+  }
+
+  /* LOGO */
+  .logo {
+    @apply flex items-center gap-2 text-white text-lg font-bold sm:text-xl md:text-2xl;
+  }
+  
+  .logoImage {
+    @apply text-yellow-400 text-3xl sm:text-4xl md:text-5xl;
+  }
+
+  /* SEARCH BAR */
+  .search-container {
+    @apply flex items-center bg-white rounded-lg shadow-md px-3 py-2 w-full max-w-[200px] 
+           sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px];
+  }
+
+  .search-input {
+    @apply flex-1 bg-transparent outline-none text-gray-700 text-sm sm:text-base;
+  }
+
+  .search-button {
+    @apply bg-yellow-400 text-white px-3 py-1 rounded-lg text-xs sm:text-sm md:text-base 
+           transition-all hover:bg-yellow-500;
+  }
+
+  /* NAVBAR MENU */
+  .navbar-container {
+    @apply hidden md:flex justify-center items-center;
+  }
+
+  .navbar-list {
+    @apply flex items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-2 text-white text-sm font-medium transition-all 
+           hover:text-gray-200 hover:scale-105 sm:text-base md:text-lg;
+  }
+
+  .nav-link-active {
+    @apply text-yellow-400 font-semibold;
+  }
+
+  /* ICON WRAPPER */
+  .icon-wrapper {
+    @apply flex items-center gap-1 relative;
+  }
+
+  .icon {
+    @apply text-white text-[20px] sm:text-[22px] md:text-[24px];
+  }
+
+  /* NAVBAR COUNTER */
+  .nav-counter {
+    @apply text-[8px] bg-red-500 text-white px-1.5 py-0.5 rounded-full 
+           absolute -top-1 -right-2 sm:text-xs sm:px-2;
+  }
+
+  /* HAMBURGER MENU */
+  .hamburger {
+    @apply block md:hidden text-white text-2xl;
+  }
+
+  /* MOBILE MENU */
+  .mobile-menu {
+    @apply flex flex-col gap-4 bg-mainBlue text-white absolute top-[60px] left-0 w-full p-4 shadow-lg md:hidden;
+  }
+}
