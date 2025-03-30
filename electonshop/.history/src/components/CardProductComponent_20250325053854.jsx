@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CartComponent({product}) {
+function CardProductComponent({product}) {
   return (
     <div>
         <img src={product.thumbnail} alt="" />
@@ -8,4 +8,4 @@ function CartComponent({product}) {
   )
 }
 
-export default CartComponent
+export default CardProductComponent
