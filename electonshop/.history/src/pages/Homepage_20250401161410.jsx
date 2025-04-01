@@ -24,9 +24,7 @@ function Homepage() {
     return (   
         <main className="homepage-container">
             {allProduct.length === 0 ? (
-                <div className="flex justify-center items-start h-screen pt-10">
-        <p className="text-gray-500 text-xl"><LoadingComponent/></p>
-      </div>
+                <p className="no-products"><LoadingComponent/></p>
             ) : (
                 <div className="product-grid">
                     {allProduct.map((product, index) => (

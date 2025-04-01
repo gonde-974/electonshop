@@ -16,5 +16,3 @@ function CardProductComponent({ product }) {
     </div>
   );
 }
-
-export default CardProductComponent

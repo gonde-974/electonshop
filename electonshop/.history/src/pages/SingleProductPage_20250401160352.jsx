@@ -17,11 +17,7 @@ function SingleProductPage() {
   }, [productId]);
 
   if (!product) {
-    return (
-      <div className="flex justify-center items-start h-screen pt-10">
-        <p className="text-gray-500 text-xl"><LoadingComponent/></p>
-      </div>
-    );
+    return <p className="text-center text-gray-500 text-xl mt-10"><LoadingComponent/></p>;
   }
 
   const handleCurrentImage = (index) => setCurrentImageIndex(index);
@@ -68,13 +64,18 @@ function SingleProductPage() {
         {/* Бројач за количина */}
         <div className="quantity-container">
           <span className="quantity-text">Количина:</span>
+
           <button 
             onClick={() => setCounter(prev => Math.max(1, prev - 1))} 
             className="quantity-btn"
           >
             -
           </button>
-          <span className="quantity-value">{counter}</span>
+
+          <span className="quantity-value">
+            {counter}
+          </span>
+
           <button 
             onClick={() => setCounter(prev => prev + 1)} 
             className="quantity-btn"

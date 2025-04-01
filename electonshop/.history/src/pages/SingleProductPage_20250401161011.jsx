@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { FaStar, FaShoppingCart } from 'react-icons/fa';
-import LoadingComponent from '../components/LoadingComponent';
 
 function SingleProductPage() {
   const { productId } = useParams();
@@ -19,7 +18,7 @@ function SingleProductPage() {
   if (!product) {
     return (
       <div className="flex justify-center items-start h-screen pt-10">
-        <p className="text-gray-500 text-xl"><LoadingComponent/></p>
+        <p className="text-gray-500 text-xl">Loading product...</p>
       </div>
     );
   }
