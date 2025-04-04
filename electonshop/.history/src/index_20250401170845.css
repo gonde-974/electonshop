@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* COMPONENTS */
+@layer components {
+  /* NAVBAR COMPONENT */
+  .nav-container {
+    @apply bg-mainBlue text-whiteTextColor shadow-md;
+  }
+
+  .nav-wrapper {
+    @apply container mx-auto flex items-center justify-between p-4;
+  }
+
+  .nav-logo {
+    @apply flex items-center gap-2 text-xl md:text-2xl font-bold;
+  }
+
+  .logo-icon {
+    @apply text-mainYellow md:text-4xl;
+  }
+
+  .search-bar {
+    @apply hidden md:flex flex-grow mx-4 items-center border border-mainYellow rounded-lg overflow-hidden max-w-lg w-full lg:w-1/3;
+  }
+
+  .search-input {
+    @apply p-2 w-full focus:outline-none text-blackTextColor;
+  }
+
+  .search-button {
+    @apply bg-mainYellow px-4 py-2 text-whiteTextColor;
+  }
+
+  .nav-icons {
+    @apply flex items-center gap-6;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-2;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium transition-all hover:text-mainYellow;
+  }
+
+  .nav-counter {
+    @apply inline-block text-xs bg-mainRed text-white px-1 rounded-full mx-1;
+  }
+
+  .menu-button {
+    @apply md:hidden text-whiteTextColor;
+  }
+
+  .mobile-nav {
+    @apply md:hidden flex flex-col items-center gap-4 py-4 bg-mainBlue text-whiteTextColor;
+  }
+
+  .mobile-search-bar {
+    @apply flex w-[90%] items-center border border-mainYellow rounded-lg overflow-hidden;
+  }
+
+  .mobile-menu {
+    @apply flex flex-col items-center gap-3;
+  }
+
+  .mobile-nav-link {
+    @apply hover:text-mainYellow;
+  }
+
+  .mobile-icons {
+    @apply flex gap-6;
+  }
+
+  /* CATEGORY COMPONENT */
+  /* index.css */
+
+/* .main-button {
+  @apply px-6 py-2 bg-gray-100 text-gray-800 font-medium rounded-lg shadow-md border border-gray-300 transition-all duration-300 hover:bg-gray-200 hover:shadow-lg active:bg-gray-300 active:shadow-inner;
+}
+
+.dropdown-menu {
+  @apply absolute top-full left-0 w-full bg-white border border-gray-300 rounded-lg shadow-lg p-3  flex flex-col items-start;
+}
+
+.close-button {
+  @apply mb-2 px-3 py-1 bg-blackTextColor text-white rounded-full shadow-md transition-all duration-300 hover:bg-red-700;
+}
+
+.category-list {
+  @apply w-full flex flex-wrap gap-3 text-left bg-gray-50 border border-gray-200 rounded-2xl shadow-md p-4 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:bg-white;
+}
+
+.category-item {
+  @apply px-4 py-2 bg-gray-100 text-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gradient-to-r hover:from-mainYellow hover:to-mainBlue hover:text-white hover:shadow-xl hover:scale-105;
+}
+
+   */
+  /* ERROR PAGE */
+  .error-container {
+    @apply flex flex-col items-center justify-center h-screen bg-gray-100 p-4;
+  }
+
+  .error-icon {
+    @apply text-mainRed mb-4;
+  }
+
+  .error-title {
+    @apply text-3xl font-bold text-blackTextColor mb-2;
+  }
+
+  .error-text {
+    @apply text-lg text-gray-700 mb-6 text-center max-w-md;
+  }
+
+  .error-button {
+    @apply px-6 py-3 bg-mainBlue text-whiteTextColor rounded-full transition-all hover:bg-mainYellow;
+  }
+
+
+  /* HOME PAGE COMPONENT */
+  
+    .homepage-container {
+        @apply container mx-auto p-4;
+    }
+
+    .no-products {
+        @apply text-center text-gray-500 text-xl mt-10;
+    }
+
+    .product-grid {
+        @apply flex flex-wrap justify-center gap-6 md:grid md:grid-cols-3 lg:grid-cols-4;
+    }
+
+    .product-card {
+        @apply bg-white rounded-xl shadow-md p-4 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+    }
+
+
+
+  /* SINGLE PRODUCT COMPONENT */
+ 
+
+.single-product-container {
+  @apply bg-white rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden max-w-5xl mx-auto p-8 border border-gray-200;
+}
+
+.image-container {
+  @apply flex flex-col items-center w-full md:w-1/2;
+}
+
+.main-image {
+  @apply w-full h-80 object-cover rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105;
+}
+
+.thumbnail-container {
+  @apply flex gap-3 mt-4;
+}
+
+.thumbnail-image {
+  @apply w-20 h-20 object-cover rounded-lg cursor-pointer transition-all duration-300 border-2;
+}
+
+.thumbnail-selected {
+  @apply border-mainBlue scale-110;
+}
+
+.thumbnail-default {
+  @apply border-gray-300 opacity-75;
+}
+
+.product-details {
+  @apply flex flex-col justify-between w-full md:w-1/2 pl-6;
+}
+
+.product-title {
+  @apply text-3xl font-bold text-red mb-4;
+}
+
+.product-price {
+  @apply text-2xl font-semibold text-mainRed mb-2;
+}
+
+.product-info {
+  @apply text-sm text-gray-500 mb-2;
+}
+
+.product-rating {
+  @apply text-sm text-gray-500 mb-2 flex items-center;
+}
+
+.product-stock {
+  @apply text-sm font-semibold mb-2;
+}
+
+.stock-low {
+  @apply text-red-500;
+}
+
+.stock-normal {
+  @apply text-gray-500;
+}
+
+.quantity-container {
+  @apply flex items-center mt-4 gap-2 sm:gap-4;
+}
+
+.quantity-text {
+  @apply text-base sm:text-lg font-semibold text-gray-700;
+}
+
+.quantity-btn {
+  @apply bg-gray-300 text-gray-700 px-3 py-2 sm:px-4 sm:py-2 rounded-lg text-sm sm:text-base font-semibold shadow hover:bg-gray-400 transition;
+}
+
+.quantity-value {
+  @apply text-lg sm:text-xl font-bold px-4 py-1 sm:px-5 sm:py-2 bg-gray-100 rounded-lg shadow-inner;
+}
+
+.add-to-cart-btn {
+  @apply mt-6 bg-mainBlue text-white px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition flex items-center justify-center gap-2;
+}
+
+
+/* CARD PRODUCT COMPONENT */
+
+  .product-card {
+      @apply relative bg-white rounded-xl shadow-lg p-4 transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-80;
+  }
+
+  .product-image {
+      @apply w-full h-48 object-cover rounded-lg;
+  }
+
+  .product-title {
+      @apply text-lg font-extrabold text-mainBlue mt-4;
+  }
+
+  .product-price-container {
+      @apply flex items-center gap-1 mt-2;
+  }
+
+  .product-price-symbol {
+      @apply text-lg font-bold text-gray-700;
+  }
+
+  .product-price {
+      @apply text-xl font-semibold text-red-500;
+  }
+
+  .product-rating {
+      @apply mt-2;
+  }
+
+  .product-detail-button {
+      @apply block text-center bg-mainBlue text-white py-2 mt-4 rounded-lg transition-all duration-300 hover:bg-blue-900 hover:scale-105;
+  }
+
+
+
+}
