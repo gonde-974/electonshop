@@ -13,7 +13,7 @@ function CartPage() {
               {/* left side */}
               <div className='w-full lg:70%'>
                  {/* Header */}
-      <div className="grid grid-cols-[1fr_1fr_1fr_1fr_60px] bg-lightBlueColor text-blackColr-text font-semibold text-center py-3 ">
+      <div className="grid grid-cols-[1fr_1fr_1fr_1fr_60px] bg-blue-600 text-white font-semibold text-center py-3 rounded-t-2xl">
         <p>Продукт</p>
         <p>Цена</p>
         <p>Количина</p>

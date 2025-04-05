@@ -6,20 +6,18 @@ function CartPage() {
   const{cart,totalPrice} = useSelector(state=>state.cartStore);
   console.log(cart)
   return (
-    <div className='px-[15px]'>
+    <div>
       {cart.length > 0 ? (
         <div className='mt-[20px] lg:mt[50px]'>
             <div className='container mx-auto flex flex-col lg:flex-row'>
               {/* left side */}
               <div className='w-full lg:70%'>
-                 {/* Header */}
-      <div className="grid grid-cols-[1fr_1fr_1fr_1fr_60px] bg-lightBlueColor text-blackColr-text font-semibold text-center py-3 ">
-        <p>Продукт</p>
-        <p>Цена</p>
-        <p>Количина</p>
-        <p>Вкупно</p>
-        
-      </div>
+                <div className='grid grid-cols-4 bg-lightBlueColor h-[60px] place-items-center'>
+                    <p>Product</p>
+                    <p>Price</p>
+                    <p>Quantity</p>
+                    <p>SubTitle</p>
+                </div>
 
                 {/* body Content */}
                 <div>
