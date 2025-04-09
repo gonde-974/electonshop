@@ -12,7 +12,10 @@ const productSlice = createSlice({
         saveAllProductAction: (state, action) => {                 
             state.allProduct = action.payload; // Ажурирање на состојбата со новите податоци
         },
-        
+
+        setNewCategoryAction:(state,action)=>{
+            state.currentCategory = action.payload;
+        }
     }
 });
 

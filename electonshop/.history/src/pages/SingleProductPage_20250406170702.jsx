@@ -74,12 +74,7 @@ function SingleProductPage() {
           <p className={`text-sm font-medium ${product.stock <= 5 ? 'text-red-500' : 'text-green-500'}`}>Stock: {product.stock} pieces</p>
           <p className="text-gray-600 font-medium">Brand: {product.brand}</p>
           <hr className="my-4 border-gray-300" />
-
-          
-          <p className="text-gray-600  font-medium">
-            Descripton: <span className="text-blue-600">{product.description}</span>
-          </p>
-          <div className="flex items-center gap-4 flex-wrap">
+    <div className="flex items-center gap-4 flex-wrap">
   {/* Копче за додaвање во кошничка */}
   <NavLink 
     to="/cart" 

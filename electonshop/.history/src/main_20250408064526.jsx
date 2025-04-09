@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Homepage from './pages/Homepage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
 import SingleProductPage from './pages/SingleProductPage.jsx'
-
+import CategoryProductList from './pages/CategoryProductList.jsx'
 import CartPage from './pages/CartPage.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
 import FavoritePage from './pages/FavoritePage.jsx'
@@ -19,7 +19,6 @@ import { Provider } from 'react-redux'
 
 // IMPORT STORE
 import store from './store/store.js'
-import CategoryProductList from './pages/CategoryProductList.jsx'
 
 // Import your Publishable Key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY

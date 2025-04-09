@@ -6,12 +6,16 @@ const productSlice = createSlice({
     name: 'products',
     initialState: {
         allProduct: [],
-        currentCategory: ''
+        currentCategory: 'smartphones'
     },
     reducers: {
         saveAllProductAction: (state, action) => {                 
             state.allProduct = action.payload; // Ажурирање на состојбата со новите податоци
         },
+
+        setCurrentCategory :(state,action) =>{
+            state.currentCategory = action.payload;
+        }
         
     }
 });

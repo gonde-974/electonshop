@@ -7,7 +7,7 @@ import CardProductComponent from "../components/CardProductComponent";
 import { FaShopify } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 
-function CategoryComponents({ setMenuCategoryOpen }) {
+function CategoryComponents() {
     const [category, setCategory] = useState([]);
     const [products, setProducts] = useState([]);
     const [isCategoryVisible, setIsCategoryVisible] = useState(false); // Контрола на видливоста на категориите
@@ -50,8 +50,8 @@ function CategoryComponents({ setMenuCategoryOpen }) {
             <button
                 onClick={() => {
                     setIsCategoryVisible(true); // Показување на категориите
-                    // setMenuCategoryOpen(true); // Отворање на менито
-                    
+                    setMenuCategoryOpen(true); // Отворање на менито
+                    disp
                 }}
                 className="px-4 py-2 bg-gray-100 text-blackColorText font-semibold rounded-lg shadow-md transition-transform hover:scale-105"
             >

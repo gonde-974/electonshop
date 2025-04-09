@@ -77,7 +77,7 @@ function SingleProductPage() {
 
           
           <p className="text-gray-600  font-medium">
-            Descripton: <span className="text-blue-600">{product.description}</span>
+            Descripton: <span className="text-blue-400">{product.description}</span>
           </p>
           <div className="flex items-center gap-4 flex-wrap">
   {/* Копче за додaвање во кошничка */}

@@ -30,7 +30,7 @@ class ProductsService {
 
         // Инаку повикај ендпоинт за категорија (ако го имаш backend тоа подготвено)
         return axios.get(`products/category/${categoryId}`)
-            .then(response => response.data)
+            .then(response => console.log(response))
             .catch(error => {
                 console.error(`Грешка при добивање производи за категорија ${categoryId}:`, error);
                 throw error;

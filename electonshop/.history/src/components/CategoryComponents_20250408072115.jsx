@@ -50,7 +50,7 @@ function CategoryComponents({ setMenuCategoryOpen }) {
             <button
                 onClick={() => {
                     setIsCategoryVisible(true); // Показување на категориите
-                    // setMenuCategoryOpen(true); // Отворање на менито
+                    setMenuCategoryOpen(true); // Отворање на менито
                     
                 }}
                 className="px-4 py-2 bg-gray-100 text-blackColorText font-semibold rounded-lg shadow-md transition-transform hover:scale-105"

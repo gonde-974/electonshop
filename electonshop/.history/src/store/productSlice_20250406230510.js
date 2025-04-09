@@ -12,9 +12,12 @@ const productSlice = createSlice({
         saveAllProductAction: (state, action) => {                 
             state.allProduct = action.payload; // Ажурирање на состојбата со новите податоци
         },
-        
+
+        setNewCategoryAction:(state,action)=>{
+            state.currentCategory = action.payload;
+        }
     }
 });
 
-export const { saveAllProductAction } = productSlice.actions;
+export const { saveAllProductAction,setNewCategoryAction } = productSlice.actions;
 export default productSlice.reducer;

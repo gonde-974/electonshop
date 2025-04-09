@@ -75,10 +75,25 @@ function SingleProductPage() {
           <p className="text-gray-600 font-medium">Brand: {product.brand}</p>
           <hr className="my-4 border-gray-300" />
 
-          
-          <p className="text-gray-600  font-medium">
-            Descripton: <span className="text-blue-600">{product.description}</span>
-          </p>
+          {/* <div className="flex items-center gap-4">
+            <span className="text-gray-700 font-medium">Quantity:</span>
+            <button
+              onClick={() => setCounter(prev => Math.max(1, prev - 1))}
+              className="bg-gray-200 px-3 py-2 rounded-md border-2 border-gray-300 hover:bg-gray-300 hover:border-blue-400 transition"
+            >
+              -
+            </button>
+            <span className="text-lg font-bold">{counter}</span>
+            <button
+              onClick={() => setCounter(prev => prev + 1)}
+              className="bg-gray-200 px-3 py-2 rounded-md border-2 border-gray-300 hover:bg-gray-300 hover:border-blue-400 transition"
+            >
+              +
+            </button>
+          </div>
+          <p className="text-lg font-semibold text-gray-800">
+            Total price: <span className="text-blue-600">${(product.price * counter).toFixed(2)}</span>
+          </p> */}
           <div className="flex items-center gap-4 flex-wrap">
   {/* Копче за додaвање во кошничка */}
   <NavLink 

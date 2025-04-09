@@ -29,8 +29,7 @@ function CartPage() {
               </div>
               {/* right side */}
               <div>
-                <h3>Total price</h3>
-                <span>{totalPrice}</span>
+                TotalPrice
               </div>
             </div>
         </div>

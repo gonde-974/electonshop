@@ -6,7 +6,7 @@ const productSlice = createSlice({
     name: 'products',
     initialState: {
         allProduct: [],
-        currentCategory: ''
+        currentCategory: 'smartphones'
     },
     reducers: {
         saveAllProductAction: (state, action) => {                 

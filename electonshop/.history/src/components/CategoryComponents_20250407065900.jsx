@@ -50,8 +50,8 @@ function CategoryComponents({ setMenuCategoryOpen }) {
             <button
                 onClick={() => {
                     setIsCategoryVisible(true); // Показување на категориите
-                    // setMenuCategoryOpen(true); // Отворање на менито
-                    
+                    setMenuCategoryOpen(true); // Отворање на менито
+                    disp
                 }}
                 className="px-4 py-2 bg-gray-100 text-blackColorText font-semibold rounded-lg shadow-md transition-transform hover:scale-105"
             >
@@ -92,6 +92,7 @@ function CategoryComponents({ setMenuCategoryOpen }) {
                     <div className="hidden sm:flex flex-wrap justify-start gap-4 mt-4">
                         {category.map((cat, index) => (
                             <Link
+                                onClick={()=>{setCurrentCategory(cat)}}
                                 key={index}
                                 to={`/category/${cat.id}`}
                                 className="px-3 py-1 bg-gray-200  shadow-md hover:bg-blue-500 hover:text-white transition-all text-sm sm:text-base md:text-lg"
