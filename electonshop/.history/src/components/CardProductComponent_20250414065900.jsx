@@ -59,15 +59,29 @@ function CardProductComponent({ product, activeView }) {
           <span className="product-price">{product.price}</span>
         </p>
       </div>
-      <Rating
+      {/* <Rating
         name="half-rating-read "
         value={product.rating}
         precision={0.5}
         readOnly
         className="product-rating"
         
-      />
-  
+      /> */}
+      <Rating
+  name="half-rating-read"
+  value={product.rating}
+  precision={0.5}
+  readOnly
+  className="product-rating"
+  sx={{
+    '& .MuiRating-iconFilled': {
+      color: 'black', // црна боја на активните ѕвезди
+    },
+    '& .MuiRating-iconEmpty': {
+      color: '#d1d5db', // опционално: сива за неактивните ѕвезди (Tailwind gray-300)
+    },
+  }}
+/>
 
    
 

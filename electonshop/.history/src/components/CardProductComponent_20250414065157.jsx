@@ -59,17 +59,28 @@ function CardProductComponent({ product, activeView }) {
           <span className="product-price">{product.price}</span>
         </p>
       </div>
-      <Rating
-        name="half-rating-read "
+      {/* <Rating
+        name="half-rating-read"
         value={product.rating}
         precision={0.5}
         readOnly
         className="product-rating"
-        
-      />
-  
-
-   
+      /> */}
+      <Rating
+  name="half-rating-read"
+  value={product.rating}
+  precision={0.5}
+  readOnly
+  sx={{
+    '& .MuiRating-iconEmpty': {
+      backgroundColor: 'black', // неактивни ѕвезди (бели по дифолт)
+      
+    },
+    '& .MuiRating-iconFilled': {
+      color: '#facc15', // активни ѕвезди – жолти (пример Tailwind yellow-400)
+    }
+  }}
+/>
 
       <Link
         to={`/singleProductPage/${product.id}`}

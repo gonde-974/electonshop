@@ -6,11 +6,12 @@ import CardProductComponent from '../components/CardProductComponent';
 import LoadingComponent from '../components/LoadingComponent';
 
 // Icons
+import { GoListUnordered } from "react-icons/go";
 import { HiViewGridAdd } from "react-icons/hi";
 import { FaList } from "react-icons/fa6";
 
 function Homepage() {
-    const [activeView, setActiveView] = useState('GridView');
+    const [activeView, setActiveView] = useState('ListView');
     const dispatch = useDispatch();
     const { allProduct } = useSelector(state => state.productStore);
 
@@ -31,6 +32,7 @@ function Homepage() {
             {/* Икони за поглед */}
             <div className="flex justify-end mb-6">
                 <div className="flex gap-2 bg-white rounded-xl shadow-sm p-2 border border-gray-100">
+
                     <button
                         onClick={() => setActiveView('GridView')}
                         className={`p-2 md:p-3 rounded-md transition-colors duration-200
@@ -54,6 +56,7 @@ function Homepage() {
                     >
                         <FaList className="text-lg md:text-xl" />
                     </button>
+
                 </div>
             </div>
 
@@ -63,13 +66,11 @@ function Homepage() {
                     <LoadingComponent />
                 </div>
             ) : (
-                <div className={
-                    activeView === 'GridView'
-                        ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
-                        : 'flex flex-col items-center gap-6'
-                }>
+                <div className={activeView === 'GridView' ? 'product-grid' : 'product-list'}>
                     {allProduct.map((product, index) => (
-                        <CardProductComponent key={product.id || index} product={product} activeView={activeView} />
+                        <div key={product.id || index} className="product-card">
+                            <CardProductComponent product={product} />
+                        </div>
                     ))}
                 </div>
             )}

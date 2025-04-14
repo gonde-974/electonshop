@@ -6,7 +6,7 @@ function CardProductComponent({ product, activeView }) {
 
   if (isListView) {
     return (
-      <div className="flex flex-col sm:flex-row sm:items-center w-[95%] sm:w-[90%] mx-auto gap-4 sm:gap-6 p-4 rounded-lg bg-white mb-4 transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer">
+      <div className="flex flex-col sm:flex-row sm:items-center w-[95%] sm:w-[90%] mx-auto gap-4 sm:gap-6 p-4 rounded-lg shadow-md bg-white mb-4 transition-all">
         {/* Слика */}
         <div className="flex justify-center sm:justify-start">
           <img
@@ -18,11 +18,16 @@ function CardProductComponent({ product, activeView }) {
 
         {/* Детали */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between flex-1 gap-3 sm:gap-6 text-center sm:text-left">
+          {/* Наслов */}
           <h2 className="text-lg font-semibold">{product.title}</h2>
+
+          {/* Цена */}
           <div className="text-gray-700 text-base">
             <span className="font-bold text-xl">$</span>{" "}
             <span>{product.price}</span>
           </div>
+
+          {/* Рејтинг */}
           <div className="flex justify-center sm:justify-start">
             <Rating
               name="half-rating-read"
@@ -31,10 +36,12 @@ function CardProductComponent({ product, activeView }) {
               readOnly
             />
           </div>
+
+          {/* Копче */}
           <div className="flex justify-center sm:justify-start">
             <Link
               to={`/singleProductPage/${product.id}`}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+              className="bg-mainBlue  text-white px-4 py-2 rounded hover:bg-mainYellow "
             >
               View Detail
             </Link>
@@ -44,9 +51,9 @@ function CardProductComponent({ product, activeView }) {
     );
   }
 
-  // GridView со исти hover ефекти
+  // GridView - оригиналниот изглед, останува недопрен
   return (
-    <div className="product-card transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer bg-white rounded-lg p-4">
+    <div className="product-card">
       <img
         src={product.thumbnail}
         alt={product.title}
@@ -60,21 +67,13 @@ function CardProductComponent({ product, activeView }) {
         </p>
       </div>
       <Rating
-        name="half-rating-read "
+        name="half-rating-read"
         value={product.rating}
         precision={0.5}
         readOnly
         className="product-rating"
-        
       />
-  
-
-   
-
-      <Link
-        to={`/singleProductPage/${product.id}`}
-        className="product-detail-button bg-mainBlue w-[250px] text-white px-4 py-2 rounded hover:bg-mainYellow transition duration-300 block text-center mt-2"
-      >
+      <Link to={`/singleProductPage/${product.id}`} className="product-detail-button">
         View Detail
       </Link>
     </div>

@@ -60,15 +60,12 @@ function CardProductComponent({ product, activeView }) {
         </p>
       </div>
       <Rating
-        name="half-rating-read "
+        name="half-rating-read"
         value={product.rating}
         precision={0.5}
         readOnly
         className="product-rating"
-        
       />
-  
-
    
 
       <Link

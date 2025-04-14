@@ -64,11 +64,9 @@ function CardProductComponent({ product, activeView }) {
         value={product.rating}
         precision={0.5}
         readOnly
-        className="product-rating"
+        className="product-rating color-black"
         
       />
-  
-
    
 
       <Link

@@ -60,17 +60,12 @@ function CardProductComponent({ product, activeView }) {
         </p>
       </div>
       <Rating
-        name="half-rating-read "
+        name="half-rating-read"
         value={product.rating}
         precision={0.5}
         readOnly
         className="product-rating"
-        
       />
-  
-
-   
-
       <Link
         to={`/singleProductPage/${product.id}`}
         className="product-detail-button bg-mainBlue w-[250px] text-white px-4 py-2 rounded hover:bg-mainYellow transition duration-300 block text-center mt-2"
