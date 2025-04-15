@@ -1,0 +1,9 @@
+Folder PATH listing
+Volume serial number is B4C9-5834
+C:\USERS\DARIO\DESKTOP\ELECTONSHOP\ELECTONSHOP\SRC
+쳐컴assets
+쳐컴components
+쳐컴pages
+쳐컴services
+쳐컴store
+읕컴utils

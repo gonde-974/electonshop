@@ -1,0 +1,22 @@
+import React from 'react'
+import { useSelector } from 'react-redux'
+import CardProductComponent from '../components/CardProductComponent';
+
+
+function FavoritePage() {
+  const { allFavoriteItems } = useSelector(state => state.favoriteStore)
+
+
+  return (
+    <div>
+      <h1>Favorite Page</h1>
+      <div>
+        {allFavoriteItems.map((fav, index) => (
+          <CardProductComponent key={fav.id || index} product={fav} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default FavoritePage
